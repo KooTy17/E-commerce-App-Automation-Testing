@@ -9,23 +9,18 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.3.0</version>
         </dependency>
-
-
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.3.4</version>
         </dependency>
-
-
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -40,8 +35,6 @@
             <version>7.3.4</version>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
 
 
@@ -60,7 +53,6 @@
                     </includes>
                 </configuration>
             </plugin>
-
             <plugin>
                 <!-- https://repo.maven.apache.org/maven2/net/masterthought/cucumber-reporting/ -->
                 <groupId>net.masterthought</groupId>

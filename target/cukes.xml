@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="338.416">
+<testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="13.322">
+<system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email "test11@example.com" field.............................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="11.305">
+<system-out><![CDATA[Given user go to login page.................................................passed
+And user login with "valid" "test11@example.com" and "P@ssw0rd".............passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="10.066">
+<system-out><![CDATA[Given user go to login page.................................................passed
+And user login with "invalid" "wrong@example.com" and "P@ssw0rd"............passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F03_Home | User could change the currency" name="User could change the currency" time="9.607">
+<system-out><![CDATA[When user press the dropdown list on the top left of home page..............passed
+And user select euro currency...............................................passed
+Then user could see products in euro currency...............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search products" name="user could search using product name" time="9.344">
+<system-out><![CDATA[When user clicks on search..................................................passed
+And user types product's name "book"........................................passed
+And user press on search button.............................................passed
+Then user gets products results "book"......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search products" name="user could search using product name 2" time="9.434">
+<system-out><![CDATA[When user clicks on search..................................................passed
+And user types product's name "laptop"......................................passed
+And user press on search button.............................................passed
+Then user gets products results "laptop"....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search products" name="user could search using product name 3" time="9.907">
+<system-out><![CDATA[When user clicks on search..................................................passed
+And user types product's name "nike"........................................passed
+And user press on search button.............................................passed
+Then user gets products results "nike"......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search products" name="user could search for product using sku" time="22.053">
+<system-out><![CDATA[When user clicks on search..................................................passed
+And user types product's sku "SCI_FAITH"....................................passed
+And user press on search button.............................................passed
+Then user gets products' sku results "SCI_FAITH"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search products" name="user could search for product using sku 2" time="22.003">
+<system-out><![CDATA[When user clicks on search..................................................passed
+And user types product's sku "APPLE_CAM"....................................passed
+And user press on search button.............................................passed
+Then user gets products' sku results "APPLE_CAM"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="F04_Search | user could search products" name="user could search for product using sku 3" time="23.552">
+<system-out><![CDATA[When user clicks on search..................................................passed
+And user types product's sku "SF_PRO_11"....................................passed
+And user press on search button.............................................passed
+Then user gets products' sku results "SF_PRO_11"............................passed
+]]></system-out>
+</testcase>
+<testcase classname="D05_hoverCategories | User could hover on one of main categories then clicks on sub category" name="user could hover categories and select from them" time="23.158">
+<system-out><![CDATA[When user hover categories..................................................passed
+Then user hover and select sub categories...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="F06_homeSliders | User could select home page sliders" name="first slider is clickable on home page" time="9.192">
+<failure message="expected:&lt;...emo.nopcommerce.com/[]&gt; but was:&lt;...emo.nopcommerce.com/[nokia-lumia-1020]&gt;" type="org.junit.ComparisonFailure"><![CDATA[When user clicks on first slider button.....................................passed
+And user clicks on first product............................................passed
+Then user go to first product page..........................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<...emo.nopcommerce.com/[]> but was:<...emo.nopcommerce.com/[nokia-lumia-1020]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at org.example.stepDefs.D06_homeSlidersStepDef.goFirstSliderResult(D06_homeSlidersStepDef.java:29)
+	at ✽.user go to first product page(file:///C:/Users/kooty/IdeaProjects/E-commerce%20App%20Automation%20Testing/src/main/resources/features/F06_homeSliders.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="F06_homeSliders | User could select home page sliders" name="second slider is clickable on home page" time="8.194">
+<failure message="expected:&lt;...emo.nopcommerce.com/[]&gt; but was:&lt;...emo.nopcommerce.com/[iphone-6]&gt;" type="org.junit.ComparisonFailure"><![CDATA[When user clicks on second slider button....................................passed
+And user clicks on second product...........................................passed
+Then user go to second product page.........................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<...emo.nopcommerce.com/[]> but was:<...emo.nopcommerce.com/[iphone-6]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at org.example.stepDefs.D06_homeSlidersStepDef.goSecondSliderResult(D06_homeSlidersStepDef.java:47)
+	at ✽.user go to second product page(file:///C:/Users/kooty/IdeaProjects/E-commerce%20App%20Automation%20Testing/src/main/resources/features/F06_homeSliders.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="D07_followUsStep | User could follow any social media" name="user opens facebook link" time="13.431">
+<system-out><![CDATA[When user opens facebook link...............................................passed
+Then "https://www.facebook.com/nopCommerce" Facebook is opened in new tab...passed
+]]></system-out>
+</testcase>
+<testcase classname="D07_followUsStep | User could follow any social media" name="user opens twitter link" time="50.087">
+<system-out><![CDATA[When user opens twitter link................................................passed
+Then "https://twitter.com/nopCommerce" Twitter is opened in new tab.........passed
+]]></system-out>
+</testcase>
+<testcase classname="D07_followUsStep | User could follow any social media" name="user opens rss link" time="18.048">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user opens rss link....................................................passed
+Then "https://demo.nopcommerce.com/new-online-store-is-open" Rss is opened in new tab.failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.stepDefs.D07_followUsStepDef.goRssOpen(D07_followUsStepDef.java:48)
+	at ✽."https://demo.nopcommerce.com/new-online-store-is-open" Rss is opened in new tab(file:///C:/Users/kooty/IdeaProjects/E-commerce%20App%20Automation%20Testing/src/main/resources/features/F07_followUs.feature:13)
+]]></failure>
+</testcase>
+<testcase classname="D07_followUsStep | User could follow any social media" name="user opens youtube link" time="34.423">
+<system-out><![CDATA[When user opens youtube link................................................passed
+Then "https://www.youtube.com/user/nopCommerce" YouTube is opened in new tab.passed
+]]></system-out>
+</testcase>
+<testcase classname="D08_WishlistStep | User could wishlist products" name="User could wishlist products" time="18.253">
+<system-out><![CDATA[When user add "HTC One M8 Android L 5.0 Lollipop" to wishlist...............passed
+Then user could see success message.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="D08_WishlistStep | User could wishlist products" name="User could wishlist products again" time="22.667">
+<system-out><![CDATA[When user add "HTC One M8 Android L 5.0 Lollipop" to wishlist...............passed
+And user could see success message..........................................passed
+And user clicks on wishlist button..........................................passed
+Then user could see wishlisted products.....................................passed
+]]></system-out>
+</testcase>
+</testsuite>

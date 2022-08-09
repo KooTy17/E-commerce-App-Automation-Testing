@@ -40,8 +40,6 @@ public class P03_homePage {
     //D05_hoverCategoriesStepDef
     @FindBy(xpath = "//ul[@class=\"top-menu notmobile\"]/li")
     public List<WebElement> hoverCategory;
-    @FindBy(xpath = "//ul[@class=\"top-menu notmobile\"]")
-    public List<WebElement> hoverSubCategory;
     @FindBy(xpath = "//div[@class=\"page-title\"]/h1")
     public WebElement hoverResult;
     //D06_homeSlidersStepDef
@@ -55,14 +53,12 @@ public class P03_homePage {
     public WebElement clickSecondSliderButton;
     @FindBy(xpath = "//a[@rel=\"1\"]")
     public WebElement clickSecondProduct;
-    @FindBy(xpath = "//div[class=\"nivoSlider\"]/a[2]")
-    public WebElement secondSliderResult;
     //D07_followUsStepDef
     @FindBy(xpath = "//a[@href=\"http://www.facebook.com/nopCommerce\"]")
     public WebElement clickFacebookLink;
     @FindBy(xpath = "//a[@href=\"https://twitter.com/nopCommerce\"]")
     public WebElement clickTwitterLink;
-    @FindBy(xpath = "//a[@href=\"rss\"]")
+    @FindBy(xpath = "//a[@href=\"/news/rss/1\"]")
     public WebElement clickRssLink;
     @FindBy(xpath = "//a[@href=\"http://www.youtube.com/user/nopCommerce\"]")
     public WebElement clickYouTubeLink;
